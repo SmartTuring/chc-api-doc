@@ -316,13 +316,16 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#introduccion" class="toc-h1 toc-link" data-title="Introducción">Introducción</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#autenticacion" class="toc-h1 toc-link" data-title="Autenticación">Autenticación</a>
+          </li>
+          <li>
+            <a href="#gatitos" class="toc-h1 toc-link" data-title="Gatitos">Gatitos</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#listar-todos-los-gatitos" class="toc-h2 toc-link" data-title="Listar todos los gatitos">Listar todos los gatitos</a>
                   </li>
                   <li>
                     <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
@@ -333,24 +336,27 @@
               </ul>
           </li>
           <li>
-            <a href="#introduccion" class="toc-h1 toc-link" data-title="Introducción">Introducción</a>
-          </li>
-          <li>
             <a href="#errores" class="toc-h1 toc-link" data-title="Errores">Errores</a>
           </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
-            <li><a href='../en'> EN </a> <a href='../'> ES </a></li>
+            <li><a href='./en'> EN </a> <a href='./'> ES </a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='authentication'>Authentication</h1>
+        <h1 id='introduccion'>Introducción</h1>
+<p>¡Bienvenido a la API de Kittn! Puede usar nuestra API para acceder a los puntos finales de la API de Kittn, que pueden obtener información sobre varios gatos, gatitos y razas en nuestra base de datos.</p>
+
+<p>¡Tenemos enlaces de lenguaje en Shell, Ruby, Python y JavaScript! Puede ver ejemplos de código en el área oscura a la derecha y puede cambiar el lenguaje de programación de los ejemplos con las pestañas en la parte superior derecha.</p>
+
+<p>Esta página de documentación de la API de ejemplo se creó con <a href="https://github.com/slatedocs/slate">Slate</a>. Siéntase libre de editarlo y usarlo como base para la documentación de su propia API.</p>
+<h1 id='autenticacion'>Autenticación</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Para autorizar, use este código:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
@@ -378,7 +384,7 @@ curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='gatitos'>Gatitos</h1><h2 id='listar-todos-los-gatitos'>Listar todos los gatitos</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
@@ -521,12 +527,6 @@ Remember — a happy kitten is an authenticated kitten!
 <td>The ID of the kitten to delete</td>
 </tr>
 </tbody></table>
-<h1 id='introduccion'>Introducción</h1>
-<p>¡Bienvenido a la API de Kittn! Puede usar nuestra API para acceder a los puntos finales de la API de Kittn, que pueden obtener información sobre varios gatos, gatitos y razas en nuestra base de datos.</p>
-
-<p>¡Tenemos enlaces de lenguaje en Shell, Ruby, Python y JavaScript! Puede ver ejemplos de código en el área oscura a la derecha y puede cambiar el lenguaje de programación de los ejemplos con las pestañas en la parte superior derecha.</p>
-
-<p>Esta página de documentación de la API de ejemplo se creó con <a href="https://github.com/slatedocs/slate">Slate</a>. Siéntase libre de editarlo y usarlo como base para la documentación de su propia API.</p>
 <h1 id='errores'>Errores</h1>
 <aside class="notice">
 Este error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
