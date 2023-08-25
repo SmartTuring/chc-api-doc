@@ -1,10 +1,1066 @@
-              <html>
-                <head>
-                  <link rel="canonical" href="./es/" />
-                  <meta http-equiv=refresh content="0; url=./es/" />
-                  <meta name="robots" content="noindex,follow" />
-                  <meta http-equiv="cache-control" content="no-cache" />
-                </head>
-                <body>
-                </body>
-              </html>
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta
+            name="description"
+            content="Documentation for the Chico Chino API"
+        >
+    <title>Chico Chino API</title>
+    <link href="images/favicon-a39babae.ico" rel="icon" type="image/ico" />
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-b12a2749.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;php&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-de65b929.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">cURL</a>
+              <a href="#" data-language-name="php">php</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduccion" class="toc-h1 toc-link" data-title="Introducción">Introducción</a>
+          </li>
+          <li>
+            <a href="#autenticacion" class="toc-h1 toc-link" data-title="Autenticación">Autenticación</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#generar-token" class="toc-h2 toc-link" data-title="Generar Token">Generar Token</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#pedidos" class="toc-h1 toc-link" data-title="Pedidos">Pedidos</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#listar-pedidos-que-no-estan-marcados-como-facturados" class="toc-h2 toc-link" data-title="Listar pedidos que no están marcados como facturados">Listar pedidos que no están marcados como facturados</a>
+                  </li>
+                  <li>
+                    <a href="#marcar-pedido-como-facturado" class="toc-h2 toc-link" data-title="Marcar pedido como Facturado">Marcar pedido como Facturado</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errores" class="toc-h1 toc-link" data-title="Errores">Errores</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li>Developer by <a href='https://sturing.com.ec'>SmartTuring S.A.S.</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduccion'>Introducción</h1>
+<p>¡Bienvenido a la API de Chico Chino! Puede usar nuestra API para acceder a los puntos finales de la API de Chico Chino, que pueden obtener información sobre los pedidos en nuestra base de datos.</p>
+
+<p>¡Tenemos enlaces de lenguaje en Shell y PHP! Puede ver ejemplos de código en el área oscura a la derecha y puede cambiar el lenguaje de programación de los ejemplos con las pestañas en la parte superior derecha.</p>
+<h1 id='autenticacion'>Autenticación</h1>
+<p>Chico Chino utiliza API keys para permitir el acceso a la API. Para obtener la misma, se requiere que con anterioridad Ud. tenga su ID y Clave Secreta de Cliente entregado por el equipo de Desarrollo.</p>
+<h2 id='generar-token'>Generar Token</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-k</span>  <span class="nt">-L</span> <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span>
+<span class="nt">-d</span> <span class="s1">'{
+    "grant_type": "client_credentials",
+    "client_id": "123",
+    "client_secret": "abcdefghijklmnopqrstuvwxyz"
+}'</span> <span class="s1">'https://app.chicochino.com.ec/oauth/token'</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$url</span> <span class="o">=</span> <span class="s1">'https://app.chicochino.com.ec/oauth/token'</span><span class="p">;</span>
+
+<span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s2">"grant_type"</span> <span class="o">=&gt;</span> <span class="s2">"client_credentials"</span><span class="p">,</span>
+    <span class="s2">"client_id"</span> <span class="o">=&gt;</span> <span class="s2">"123"</span><span class="p">,</span>
+    <span class="s2">"client_secret"</span> <span class="o">=&gt;</span> <span class="s2">"abcdefghijklmnopqrstuvwxyz"</span>
+<span class="p">);</span>
+
+<span class="nv">$options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="no">CURLOPT_URL</span> <span class="o">=&gt;</span> <span class="nv">$url</span><span class="p">,</span>
+    <span class="no">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="no">CURLOPT_POST</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="no">CURLOPT_POSTFIELDS</span> <span class="o">=&gt;</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$data</span><span class="p">),</span>
+    <span class="no">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">'Content-Type: application/json'</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
+<span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nv">$options</span><span class="p">);</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$response</span><span class="p">;</span>
+</code></pre></div>
+<blockquote>
+<p>Para el request previo, la respuesta es un JSON estructurado como sigue:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">31622400</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your_token"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Para generar su API key debe hacer una petición al servidor con la ID y clave, luego recibirá una API key única, con validez de un (1) año, debe almacenar la misma en un lugar NO público, ya que la misma adicional de dar acceso al uso de los diferentes Endpoint, le identificará a Ud. para las diferentes transacciones.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://app.chicochino.com.ec/oauth/token</code></p>
+<h3 id='parametros-url'>Parámetros URL</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>grant_type</td>
+<td>Tipo de concesión</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>Es el identificador público de la aplicación. Una aplicación es el resultado de registrar un nuevo cliente en nuestro servidor OAuth. El mismo que usamos en la primera petición.</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>es una contraseña o secreto que generaremos en el servidor de OAuth en relación con el cliente (la aplicación).</td>
+</tr>
+</tbody></table>
+<h3 id='respuesta'>Respuesta</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>token_type</td>
+<td>Indicará el tipo de token generado, por defecto &quot;Bearer&quot;</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>Contiene el número de segundos hasta que expire el token de acceso</td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>Este será su <code>token</code> que tendrá que incluir en adelante en todas las peticiones en la cabecera <code>Header</code></td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Para consumir los endpoints, use este código:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Con Shell, puede simplemente pasar el </span>
+<span class="c"># encabezado correcto con cada solicitud.</span>
+curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer token"</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$apiEndpoint</span> <span class="o">=</span> <span class="s2">"api_endpoint_here"</span><span class="p">;</span>
+<span class="nv">$accessToken</span> <span class="o">=</span> <span class="s2">"your_bearer_token"</span><span class="p">;</span>
+
+<span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="nv">$apiEndpoint</span><span class="p">);</span>
+
+<span class="nv">$options</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="no">CURLOPT_RETURNTRANSFER</span> <span class="o">=&gt;</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="no">CURLOPT_HTTPHEADER</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">'Authorization: Bearer '</span> <span class="mf">.</span> <span class="nv">$accessToken</span>
+    <span class="p">)</span>
+<span class="p">);</span>
+
+<span class="nb">curl_setopt_array</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span> <span class="nv">$options</span><span class="p">);</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$response</span><span class="p">;</span>
+</code></pre></div>
+<blockquote>
+<p>Asegúrese de reemplazar <code>token</code> con su token generado anteriormente.</p>
+</blockquote>
+
+<p>Chico Chino espera que el <code>token</code> se incluya en todas las solicitudes de API al servidor en un encabezado similar al siguiente:</p>
+
+<p><code>Authorization: Bearer &#39;token&#39;</code></p>
+
+<aside class="notice">
+Debe reemplazar <code>'token'</code> con el su token generado anteriormente.
+</aside>
+<h1 id='pedidos'>Pedidos</h1><h2 id='listar-pedidos-que-no-estan-marcados-como-facturados'>Listar pedidos que no están marcados como facturados</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Se asume que abcdedghi... es el token</span>
+curl <span class="s2">"https://app.chicochino.com.ec/api/v1/invoice/orders"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer abcdedghi..."</span>
+</code></pre></div>
+<blockquote>
+<p>Para el request previo, la respuesta es un JSON estructurado como sigue:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100007</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">42.44</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivered"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.19</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cash"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transaction_reference"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"checked"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">        
+        </span><span class="nl">"delivery_charge"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pos"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"extra_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100007</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">13.3</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"product_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Combo Familiar"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Pollo entero/ 8 presas, porción de papas fritas, porción de menestra, porción de arroz"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-08-6480e66929009.png"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.3</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tax_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"translations"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"variation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"Tamaño"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medio Combo"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"discount_on_product"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"discount_on_product"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"variant"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\"</span><span class="s2">MedioCombo</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"add_ons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Presa de pollo"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.75</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Porción Ensalada"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.3</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100008</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">42.44</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivered"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.19</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transaction_reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AB-1234"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"checked"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"delivery_charge"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.50</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"web"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"extra_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"f_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luis"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"l_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ortiz"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1712345678"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"luis@gmail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+593999905876"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100008</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">13.3</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"product_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Combo Familiar"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 Pollo entero/ 8 presas, porción de papas fritas, porción de menestra, porción de arroz"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-08-6480e66929009.png"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.3</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tax_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"translations"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"variation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"Tamaño"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medio Combo"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"discount_on_product"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"discount_on_product"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"variant"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\"</span><span class="s2">MedioCombo</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"add_ons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Presa de pollo"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.75</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Porción Ensalada"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.3</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>Este endpoint recupera todos los pedidos que no se han marcado como facturados.</p>
+
+<aside class="notice">
+Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <a href='#generar-token'>Como generar token</a>
+</aside>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://app.chicochino.com.ec/api/v1/invoice/orders</code></p>
+<h3 id='respuesta'>Respuesta</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador o número de pedido.</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>Identificador del cliente en el sistema.</td>
+</tr>
+<tr>
+<td>order_amount</td>
+<td>Valor total del pedido (Productos + Impuestos + Valor de envío - Descuentos).</td>
+</tr>
+<tr>
+<td>coupon_discount_amount</td>
+<td>Valor de descuento por cupón.</td>
+</tr>
+<tr>
+<td>coupon_discount_title</td>
+<td>Título de cupón de descuento.</td>
+</tr>
+<tr>
+<td>payment_status</td>
+<td>Estado de pago: <strong>paid</strong> o <strong>unpaid</strong>. Por defecto este endpoint solo responderá con los pedidos en estado paid.</td>
+</tr>
+<tr>
+<td>order_status</td>
+<td>Estado del pedido: <strong>pending</strong>, <strong>out_for_delivery</strong>, <strong>delivered</strong>, <strong>failed</strong>. En este se recibe el estado de <strong>pendiente</strong>, <strong>en camino</strong>, <strong>entregado</strong>, y <strong>falló</strong> respectivamente.</td>
+</tr>
+<tr>
+<td>total_tax_amount</td>
+<td>Monto de impuesto calculado por el sistema.</td>
+</tr>
+<tr>
+<td>payment_method</td>
+<td>Método de pago: <strong>cash</strong>, <strong>card</strong>. Los métodos de pagos pueden variar en el tiempo.</td>
+</tr>
+<tr>
+<td>transaction_reference</td>
+<td>Referencia de transacción. Proveniente del método de pago.</td>
+</tr>
+<tr>
+<td>checked</td>
+<td>Indica si el pedido ha sido revisado por el operador.</td>
+</tr>
+<tr>
+<td>delivery_charge</td>
+<td>Costo de envío</td>
+</tr>
+<tr>
+<td>order_note</td>
+<td>Nota del pedido</td>
+</tr>
+<tr>
+<td>coupon_code</td>
+<td>Código de cupón <em>si aplica</em> caso contrario retorna null</td>
+</tr>
+<tr>
+<td>order_type</td>
+<td>Indica el canal por donde se recibió el pedido: <strong>pos</strong> <em>Recibido por el panel POS del sistema</em>, <strong>app</strong> <em>Recibido por medio de la aplicación móvil</em>, <strong>web</strong> <em>Recibo por medio de la página web</em>.</td>
+</tr>
+<tr>
+<td>branch_id</td>
+<td>Id de la sucursal que recibió el pedido</td>
+</tr>
+<tr>
+<td>extra_discount</td>
+<td>Descuento extra que haya recibido</td>
+</tr>
+<tr>
+<td>invoiced</td>
+<td>Booleano <strong>true</strong> o <strong>false</strong>, indica si el pedido ya fue facturado o no.</td>
+</tr>
+<tr>
+<td>customer</td>
+<td>Objeto <strong>Cliente</strong> contiene la información y detalle del cliente <a href="#cliente">ver Cliente</a>, en caso de no registrar retorna el valor <strong>null</strong>. (En este caso facturar como <em>Consumidor Final</em>).</td>
+</tr>
+<tr>
+<td>details</td>
+<td>Detalle del pedido en <strong>array</strong> donde contiene el o los productos ordenados <a href='#detalle'> ver Detalle</a>.</td>
+</tr>
+</tbody></table>
+<h3 id='cliente'>Cliente</h3>
+<p>Respuesta contenida en el json recibido en el Endpoint <strong>invoice/orders</strong> nombrado como <strong>customer</strong>.</p>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador del cliente dentro del sistema.</td>
+</tr>
+<tr>
+<td>f_name</td>
+<td>Nombre del cliente.</td>
+</tr>
+<tr>
+<td>l_name</td>
+<td>Apellido del cliente.</td>
+</tr>
+<tr>
+<td>identification</td>
+<td>Número de identificación del cliente (<em>Cédula, RUC, o Pasaporte</em>).</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Correo electrónico del cliente.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Imagen de perfil del cliente.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Número de teléfono/celular del cliente.</td>
+</tr>
+</tbody></table>
+<h3 id='detalle'>Detalle</h3>
+<p>Respuesta contenida en el json recibido en el Endpoint <strong>invoice/orders</strong> nombrado como <strong>details</strong>, aquí se explica el detalle individual contenido dentro del <strong>array</strong>.
+<aside class="notice">
+El atributo <code>details</code> puede contener uno o varios detalles del pedido.
+</aside></p>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador del detalle.</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td>Identificador del producto.</td>
+</tr>
+<tr>
+<td>order_id</td>
+<td>Identificador del pedido asociado al detalle.</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Valor del producto <strong>Tomar este valor al facturar</strong>.</td>
+</tr>
+<tr>
+<td>product_details.id</td>
+<td>Identificador del producto.</td>
+</tr>
+<tr>
+<td>product_details.name</td>
+<td>Nombre del producto</td>
+</tr>
+<tr>
+<td>product_details.description</td>
+<td>Descripción del producto.</td>
+</tr>
+<tr>
+<td>product_details.image</td>
+<td>URL de la imagen del producto.</td>
+</tr>
+<tr>
+<td>product_details.price</td>
+<td>Valor <em>referencial</em> del producto <em>(Puede variar al valor cobrado, ya que puede que se haya seleccionado alguna variante del mismo o aplicado algún descuento)</em>.</td>
+</tr>
+<tr>
+<td>product_details.tax</td>
+<td>Impuesto aplicado al producto.</td>
+</tr>
+<tr>
+<td>product_details.discount</td>
+<td>Descuento aplicado al prducto.</td>
+</tr>
+<tr>
+<td>product_details.discount_type</td>
+<td>Tipo de descuento aplicado <strong>percent</strong> o <strong>plane</strong>, es decir, porcentaje o valor fijo respectivamente.</td>
+</tr>
+<tr>
+<td>product_details.tax_type</td>
+<td>Tipo de impuesto aplicado <strong>percent</strong> o <strong>plane</strong>, es decir, porcentaje o valor fijo respectivamente.</td>
+</tr>
+<tr>
+<td>product_details.branch_id</td>
+<td>Identificador de la sucursal aplicada.</td>
+</tr>
+<tr>
+<td>product_details.translations</td>
+<td>Traducciones del producto en diferentes idiomas <em>(Si aplica)</em>.</td>
+</tr>
+<tr>
+<td>variation</td>
+<td><strong>Array dinámico</strong> Contiene la variación del producto aplicada.</td>
+</tr>
+<tr>
+<td>discount_on_product</td>
+<td>Contiene el descuento aplicado en el producto.</td>
+</tr>
+<tr>
+<td>discount_type</td>
+<td>Contiene el tipo de descuento aplicado en el producto.</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>Indica la cantidad del producto aplicado en este detalle.</td>
+</tr>
+<tr>
+<td>tax_amount</td>
+<td>Valor de impuesto aplicado al producto.</td>
+</tr>
+<tr>
+<td>variant</td>
+<td>Identificador en el sistema de la variación del producto.</td>
+</tr>
+<tr>
+<td><strong>add_ons</strong></td>
+<td><strong>Array</strong> que contiene los productos adicionales solicitados, relacionados a este detalle.</td>
+</tr>
+<tr>
+<td>add_ons[].id</td>
+<td>Identificador del producto adicional.</td>
+</tr>
+<tr>
+<td>add_ons[].name</td>
+<td>Nombre del producto adicional.</td>
+</tr>
+<tr>
+<td>add_ons[].price</td>
+<td>Precio del producto adicional.</td>
+</tr>
+<tr>
+<td>add_ons[].qty</td>
+<td>Cantidad solicitada del producto adicional.</td>
+</tr>
+</tbody></table>
+<h2 id='marcar-pedido-como-facturado'>Marcar pedido como Facturado</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Se asume que abcdedghi... es el token</span>
+curl <span class="nt">-k</span>  <span class="nt">-L</span> <span class="nt">-X</span> POST  <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span><span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer abcdedghi..."</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+      "id": "100001",
+      "invoiced":true
+  }'</span> <span class="s1">'https://app.chicochino.com.ec/api/v1/invoice/set-order'</span>
+</code></pre></div>
+<blockquote>
+<p>Para el request previo, la respuesta es un JSON estructurado como sigue:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100001</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">43.6</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivered"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cash_on_delivery"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"checked"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivery"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"extra_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>En caso de que falle por algún motivo, tendrá esta respuesta:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Order not found"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"failed"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Este Endpoint marca a un pedido específico como facturado.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://app.chicochino.com.ec/api/v1/invoice/set-order</code></p>
+
+<aside class="notice">
+Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <a href='#generar-token'>Como generar token</a>
+</aside>
+<h3 id='parametros-url'>Parámetros URL</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Identificador o número de pedido.</td>
+</tr>
+<tr>
+<td>invoiced</td>
+<td>Boolean</td>
+<td>Solo aceptará el valor de <strong>true</strong> para confirmar si un pedido fue facturado.</td>
+</tr>
+</tbody></table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>message</strong></td>
+<td>En caso de éxito retornará el detalle resumido del pedido, caso contrario, retornará un <em>String</em> con un mensaje acerca del motivo de la falla.</td>
+</tr>
+<tr>
+<td>message.id</td>
+<td>Identificador o número de pedido.</td>
+</tr>
+<tr>
+<td>message.order_amount</td>
+<td>Monto del pedido.</td>
+</tr>
+<tr>
+<td>message.coupon_discount_amount</td>
+<td>Monto de descuento por cupón.</td>
+</tr>
+<tr>
+<td>message.coupon_discount_title</td>
+<td>Título de cupón de descuento.</td>
+</tr>
+<tr>
+<td>message.payment_status</td>
+<td>Estado de pago del pedido <em>paid</em> o <em>unpaid</em></td>
+</tr>
+<tr>
+<td>message.order_status</td>
+<td>Estado del pedido</td>
+</tr>
+<tr>
+<td>message.total_tax_amount</td>
+<td>Monto de impuesto aplicado</td>
+</tr>
+<tr>
+<td>message.payment_method</td>
+<td>Método de pago</td>
+</tr>
+<tr>
+<td>message.checked</td>
+<td>Marca <em>1</em> si fué verificado por operador o <em>0</em> en caso contrario.</td>
+</tr>
+<tr>
+<td>message.order_type</td>
+<td>Tipo de canal recibido para el pedido.</td>
+</tr>
+<tr>
+<td>message.branch_id</td>
+<td>Identificado de la sucursal en la que se recibió el pedido.</td>
+</tr>
+<tr>
+<td>message.extra_discount</td>
+<td>Descuento extra, si aplicara.</td>
+</tr>
+<tr>
+<td>message.invoiced</td>
+<td>Marcará <strong>true</strong> si se marcó como facturado o <strong>false</strong> en el caso contrario.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Contentrá el valor de <strong>success</strong> si se realizó la marca como facturado, o <strong>failed</strong> en caso de alguna falla.</td>
+</tr>
+</tbody></table>
+<h1 id='errores'>Errores</h1>
+<p>Chico Chino API utiliza los siguientes códigos de error:</p>
+
+<table><thead>
+<tr>
+<th>Código de Error</th>
+<th>Explicación</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Su solicitud no es válida.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Su clave de API es incorrecta.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- El requerimiento no está disponible.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- No se pudo encontrar el endpoint especificado.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- Intentaste acceder a un endpoint con un método no válido.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- Solicitó un formato que no es json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- El requerimiento solicitado ha sido eliminado de nuestros servidores.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- Demasiadas solicitudes: ¡Estás solicitando demasiados peticiones! ¡Tranquilo!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- Error interno del servidor: tuvimos un problema con nuestro servidor. Inténtalo de nuevo más tarde.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- Servicio no disponible: estamos temporalmente fuera de línea por mantenimiento. Inténtalo de nuevo más tarde.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">cURL</a>
+                <a href="#" data-language-name="php">php</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
