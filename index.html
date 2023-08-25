@@ -543,7 +543,8 @@ curl <span class="s2">"https://app.chicochino.com.ec/api/v1/invoice/orders"</spa
                     </span><span class="p">}</span><span class="w">
                 </span><span class="p">]</span><span class="w">
             </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"delivery_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100008</span><span class="p">,</span><span class="w">
@@ -566,12 +567,12 @@ curl <span class="s2">"https://app.chicochino.com.ec/api/v1/invoice/orders"</spa
         </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"f_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luis"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"l_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ortiz"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"f_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"l_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1712345678"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"luis@gmail.com"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+593999905876"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+593987654321"</span><span class="p">,</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
@@ -617,7 +618,19 @@ curl <span class="s2">"https://app.chicochino.com.ec/api/v1/invoice/orders"</spa
                     </span><span class="p">}</span><span class="w">
                 </span><span class="p">]</span><span class="w">
             </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"delivery_address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"address_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Home"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_person_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+593987654321"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N-6143 Distrito Metropolitano de Quito EC"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-0.1231193340030719"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-78.49368810653687"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-19T22:04:22.000000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-19T22:04:22.000000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_person_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
@@ -714,6 +727,10 @@ Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <
 <tr>
 <td>details</td>
 <td>Detalle del pedido en <strong>array</strong> donde contiene el o los productos ordenados <a href='#detalle'> ver Detalle</a>.</td>
+</tr>
+<tr>
+<td>delivery_address</td>
+<td>En caso de registrar, mostrará el detalle de la dirección a donde fue enviado el pedido, caso contrario, retornará <em>null</em>. <a href="#direccion-de-envio">Ver Dirección</a>.</td>
 </tr>
 </tbody></table>
 <h3 id='cliente'>Cliente</h3>
@@ -869,6 +886,44 @@ El atributo <code>details</code> puede contener uno o varios detalles del pedido
 <tr>
 <td>add_ons[].qty</td>
 <td>Cantidad solicitada del producto adicional.</td>
+</tr>
+</tbody></table>
+<h3 id='direccion-de-envio'>Dirección de envío</h3>
+<p>Respuesta contenida en el json recibido en el Endpoint <strong>invoice/orders</strong> nombrado como <strong>delivery_address</strong>.</p>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador la dirección en el sistema.</td>
+</tr>
+<tr>
+<td>address_type</td>
+<td>Tipo de dirección almacenado.</td>
+</tr>
+<tr>
+<td>contact_person_number</td>
+<td>Contacto de la persona registrada en esta dirección.</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Dirección registrada para el envío.</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Latitud de la dirección.</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Longitud de la dirección.</td>
+</tr>
+<tr>
+<td>contact_person_name</td>
+<td>Contacto de la persona en esa dirección.</td>
 </tr>
 </tbody></table>
 <h2 id='marcar-pedido-como-facturado'>Marcar pedido como Facturado</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Se asume que abcdedghi... es el token</span>
