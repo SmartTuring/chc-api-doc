@@ -335,6 +335,17 @@
               </ul>
           </li>
           <li>
+            <a href="#pedidos" class="toc-h1 toc-link" data-title="Pedidos">Pedidos</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#listar-pedidos-que-no-estan-marcados-como-facturados" class="toc-h2 toc-link" data-title="Listar pedidos que no están marcados como facturados">Listar pedidos que no están marcados como facturados</a>
+                  </li>
+                  <li>
+                    <a href="#marcar-pedido-como-facturado" class="toc-h2 toc-link" data-title="Marcar pedido como Facturado">Marcar pedido como Facturado</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -522,6 +533,625 @@ Remember — a happy kitten is an authenticated kitten!
 <tr>
 <td>ID</td>
 <td>The ID of the kitten to delete</td>
+</tr>
+</tbody></table>
+<h1 id='pedidos'>Pedidos</h1><h2 id='listar-pedidos-que-no-estan-marcados-como-facturados'>Listar pedidos que no están marcados como facturados</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Se asume que abcdedghi... es el token</span>
+curl <span class="s2">"https://app.chicochino.com.ec/api/v1/invoice/orders"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer abcdedghi..."</span>
+</code></pre></div>
+<blockquote>
+<p>Para el request previo, la respuesta es un JSON estructurado como sigue:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100016</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"subtotal_vat"</span><span class="p">:</span><span class="w"> </span><span class="mf">30.54</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"subtotal_0"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivered"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.66</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cash"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"transaction_reference"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"delivery_address_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-10T04:24:01.000000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-10T04:24:01.000000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"checked"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"delivery_man_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"delivery_charge"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pos"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"callback"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"delivery_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-09"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"delivery_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23:24:01"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"extra_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"f_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luis"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"l_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ortiz"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999999999999"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"luis@gmail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"is_phone_verified"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"email_verified_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-30T01:12:47.000000Z"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"email_verification_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+593999905876"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+593999905876"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cm_firebase_token"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"point"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"temporary_token"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"deleted_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"details"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100016</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"price_without_vat"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.04</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"product_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Producto Test"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Producto para testeo"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-08-64fbe11502f5d.png"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"available_time_starts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00:00:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"available_time_ends"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23:59:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-09T03:05:57.000000Z"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-09T03:05:57.000000Z"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="s2">"2"</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"category_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"choice_options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"choice_2"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tamaño"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                                </span><span class="s2">"Pequeño"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"Regular"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"Grande"</span><span class="w">
+                            </span><span class="p">]</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tax_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"set_menu"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"colors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"translations"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"variation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"Tamaño"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pequeño"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"discount_on_product"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"discount_on_product"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.96</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-10T04:24:01.000000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-10T04:24:01.000000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"add_ons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Porción de papas"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.9</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"price_without_vat"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.59</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"vat"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.31</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"variant_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pequeño"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100016</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">13.3</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"price_without_vat"</span><span class="p">:</span><span class="w"> </span><span class="mf">11.88</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"product_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Combo Familiar 1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-08-6480e6fbc84c4.png"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">13.3</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tax"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"available_time_starts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10:30:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"available_time_ends"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19:30:00"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-06-08T12:22:19.000000Z"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-09T03:54:02.000000Z"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                    </span><span class="nl">"category_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+                            </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">],</span><span class="w">
+                    </span><span class="nl">"choice_options"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                    </span><span class="nl">"discount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"tax_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"percent"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"set_menu"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"colors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"translations"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="nl">"variation"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">[]</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"discount_on_product"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"discount_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"discount_on_product"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.43</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-10T04:24:01.000000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-10T04:24:01.000000Z"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"add_ons"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="nl">"variant_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"delivery_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>Este endpoint recupera todos los pedidos que no se han marcado como facturados.</p>
+
+<aside class="notice">
+Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <a href='#generar-token'>Como generar token</a>
+</aside>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://app.chicochino.com.ec/api/v1/invoice/orders</code></p>
+<h3 id='respuesta'>Respuesta</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador o número de pedido.</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>Identificador del cliente en el sistema.</td>
+</tr>
+<tr>
+<td>order_amount</td>
+<td>Valor total del pedido (Productos + Impuestos + Valor de envío - Descuentos).</td>
+</tr>
+<tr>
+<td>subtotal_vat</td>
+<td>Subtotal de los <strong>productos con IVA diferente de 0</strong>.</td>
+</tr>
+<tr>
+<td>subtotal_0</td>
+<td>Subtotal de los <strong>productos con IVA igual a 0</strong>.</td>
+</tr>
+<tr>
+<td>coupon_discount_amount</td>
+<td>Valor de descuento por cupón.</td>
+</tr>
+<tr>
+<td>coupon_discount_title</td>
+<td>Título de cupón de descuento.</td>
+</tr>
+<tr>
+<td>payment_status</td>
+<td>Estado de pago: <strong>paid</strong> o <strong>unpaid</strong>. Por defecto este endpoint solo responderá con los pedidos en estado paid.</td>
+</tr>
+<tr>
+<td>order_status</td>
+<td>Estado del pedido: <strong>pending</strong>, <strong>out_for_delivery</strong>, <strong>delivered</strong>, <strong>failed</strong>. En este se recibe el estado de <strong>pendiente</strong>, <strong>en camino</strong>, <strong>entregado</strong>, y <strong>falló</strong> respectivamente.</td>
+</tr>
+<tr>
+<td>total_tax_amount</td>
+<td>Monto de impuesto calculado por el sistema.</td>
+</tr>
+<tr>
+<td>payment_method</td>
+<td>Método de pago: <strong>cash</strong>, <strong>card</strong>. Los métodos de pagos pueden variar en el tiempo.</td>
+</tr>
+<tr>
+<td>transaction_reference</td>
+<td>Referencia de transacción. Proveniente del método de pago.</td>
+</tr>
+<tr>
+<td>checked</td>
+<td>Indica si el pedido ha sido revisado por el operador.</td>
+</tr>
+<tr>
+<td>delivery_charge</td>
+<td>Costo de envío</td>
+</tr>
+<tr>
+<td>order_note</td>
+<td>Nota del pedido</td>
+</tr>
+<tr>
+<td>coupon_code</td>
+<td>Código de cupón <em>si aplica</em> caso contrario retorna null</td>
+</tr>
+<tr>
+<td>order_type</td>
+<td>Indica el canal por donde se recibió el pedido: <strong>pos</strong> <em>Recibido por el panel POS del sistema</em>, <strong>app</strong> <em>Recibido por medio de la aplicación móvil</em>, <strong>web</strong> <em>Recibo por medio de la página web</em>.</td>
+</tr>
+<tr>
+<td>branch_id</td>
+<td>Id de la sucursal que recibió el pedido</td>
+</tr>
+<tr>
+<td>extra_discount</td>
+<td>Descuento extra que haya recibido</td>
+</tr>
+<tr>
+<td>invoiced</td>
+<td>Booleano <strong>true</strong> o <strong>false</strong>, indica si el pedido ya fue facturado o no.</td>
+</tr>
+<tr>
+<td>customer</td>
+<td>Objeto <strong>Cliente</strong> contiene la información y detalle del cliente <a href="#cliente">ver Cliente</a>, en caso de no registrar retorna el valor <strong>null</strong>. (En este caso facturar como <em>Consumidor Final</em>).</td>
+</tr>
+<tr>
+<td>details</td>
+<td>Detalle del pedido en <strong>array</strong> donde contiene el o los productos ordenados <a href='#detalle'> ver Detalle</a>.</td>
+</tr>
+<tr>
+<td>delivery_address</td>
+<td>En caso de registrar, mostrará el detalle de la dirección a donde fue enviado el pedido, caso contrario, retornará <em>null</em>. <a href="#direccion-de-envio">Ver Dirección</a>.</td>
+</tr>
+</tbody></table>
+<h3 id='cliente'>Cliente</h3>
+<p>Respuesta contenida en el json recibido en el Endpoint <strong>invoice/orders</strong> nombrado como <strong>customer</strong>.</p>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador del cliente dentro del sistema.</td>
+</tr>
+<tr>
+<td>f_name</td>
+<td>Nombre del cliente.</td>
+</tr>
+<tr>
+<td>l_name</td>
+<td>Apellido del cliente.</td>
+</tr>
+<tr>
+<td>identification</td>
+<td>Número de identificación del cliente (<em>Cédula, RUC, o Pasaporte</em>).</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Correo electrónico del cliente.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Imagen de perfil del cliente.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Número de teléfono/celular del cliente.</td>
+</tr>
+</tbody></table>
+<h3 id='detalle'>Detalle</h3>
+<p>Respuesta contenida en el json recibido en el Endpoint <strong>invoice/orders</strong> nombrado como <strong>details</strong>, aquí se explica el detalle individual contenido dentro del <strong>array</strong>.
+<aside class="notice">
+El atributo <code>details</code> puede contener uno o varios detalles del pedido.
+</aside></p>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador del detalle.</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td>Identificador del producto.</td>
+</tr>
+<tr>
+<td>order_id</td>
+<td>Identificador del pedido asociado al detalle.</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Valor del producto incluido IVA <strong>Tomar este valor al facturar</strong>.</td>
+</tr>
+<tr>
+<td>price_without_vat</td>
+<td>Valor del producto sin incluir IVA <strong>Tomar este valor al facturar</strong>.</td>
+</tr>
+<tr>
+<td>product_details.id</td>
+<td>Identificador del producto.</td>
+</tr>
+<tr>
+<td>product_details.name</td>
+<td>Nombre del producto</td>
+</tr>
+<tr>
+<td>product_details.description</td>
+<td>Descripción del producto.</td>
+</tr>
+<tr>
+<td>product_details.image</td>
+<td>URL de la imagen del producto.</td>
+</tr>
+<tr>
+<td>product_details.price</td>
+<td>Valor <em>referencial</em> del producto <em>(Puede variar al valor cobrado, ya que puede que se haya seleccionado alguna variante del mismo o aplicado algún descuento)</em>.</td>
+</tr>
+<tr>
+<td>product_details.tax</td>
+<td>Impuesto aplicado al producto.</td>
+</tr>
+<tr>
+<td>product_details.discount</td>
+<td>Descuento aplicado al prducto.</td>
+</tr>
+<tr>
+<td>product_details.discount_type</td>
+<td>Tipo de descuento aplicado <strong>percent</strong> o <strong>plane</strong>, es decir, porcentaje o valor fijo respectivamente.</td>
+</tr>
+<tr>
+<td>product_details.tax_type</td>
+<td>Tipo de impuesto aplicado <strong>percent</strong> o <strong>plane</strong>, es decir, porcentaje o valor fijo respectivamente.</td>
+</tr>
+<tr>
+<td>product_details.branch_id</td>
+<td>Identificador de la sucursal aplicada.</td>
+</tr>
+<tr>
+<td>product_details.translations</td>
+<td>Traducciones del producto en diferentes idiomas <em>(Si aplica)</em>.</td>
+</tr>
+<tr>
+<td>variation</td>
+<td><strong>Array dinámico</strong> Contiene la variación del producto aplicada.</td>
+</tr>
+<tr>
+<td>discount_on_product</td>
+<td>Contiene el descuento aplicado en el producto.</td>
+</tr>
+<tr>
+<td>discount_type</td>
+<td>Contiene el tipo de descuento aplicado en el producto.</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>Indica la cantidad del producto aplicado en este detalle.</td>
+</tr>
+<tr>
+<td>tax_amount</td>
+<td>Valor de impuesto aplicado al producto.</td>
+</tr>
+<tr>
+<td>variant</td>
+<td>Identificador en el sistema de la variación del producto.</td>
+</tr>
+<tr>
+<td><strong>add_ons</strong></td>
+<td><strong>Array</strong> que contiene los productos adicionales solicitados, relacionados a este detalle.</td>
+</tr>
+<tr>
+<td>add_ons[].id</td>
+<td>Identificador del producto adicional.</td>
+</tr>
+<tr>
+<td>add_ons[].name</td>
+<td>Nombre del producto adicional.</td>
+</tr>
+<tr>
+<td>add_ons[].price</td>
+<td>Precio del producto adicional <strong>incluido IVA</strong>.</td>
+</tr>
+<tr>
+<td>add_ons[].qty</td>
+<td>Cantidad solicitada del producto adicional.</td>
+</tr>
+<tr>
+<td>add_ons[].price_without_vat</td>
+<td>Precio del producto adicional <strong>sin incluir IVA</strong>.</td>
+</tr>
+<tr>
+<td>add_ons[].vat</td>
+<td>Valor de <strong>IVA</strong> del producto adicional.</td>
+</tr>
+</tbody></table>
+<h3 id='direccion-de-envio'>Dirección de envío</h3>
+<p>Respuesta contenida en el json recibido en el Endpoint <strong>invoice/orders</strong> nombrado como <strong>delivery_address</strong>.</p>
+
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador la dirección en el sistema.</td>
+</tr>
+<tr>
+<td>address_type</td>
+<td>Tipo de dirección almacenado.</td>
+</tr>
+<tr>
+<td>contact_person_number</td>
+<td>Contacto de la persona registrada en esta dirección.</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Dirección registrada para el envío.</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Latitud de la dirección.</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Longitud de la dirección.</td>
+</tr>
+<tr>
+<td>contact_person_name</td>
+<td>Contacto de la persona en esa dirección.</td>
+</tr>
+</tbody></table>
+<h2 id='marcar-pedido-como-facturado'>Marcar pedido como Facturado</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Se asume que abcdedghi... es el token</span>
+curl <span class="nt">-k</span>  <span class="nt">-L</span> <span class="nt">-X</span> POST  <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span><span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer abcdedghi..."</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+      "id": "100001",
+      "invoiced":true
+  }'</span> <span class="s1">'https://app.chicochino.com.ec/api/v1/invoice/set-order'</span>
+</code></pre></div>
+<blockquote>
+<p>Para el request previo, la respuesta es un JSON estructurado como sigue:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">100001</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">43.6</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"coupon_discount_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paid"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivered"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total_tax_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cash_on_delivery"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"checked"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"delivery"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"branch_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"extra_discount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>En caso de que falle por algún motivo, tendrá esta respuesta:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Order not found"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"failed"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Este Endpoint marca a un pedido específico como facturado.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://app.chicochino.com.ec/api/v1/invoice/set-order</code></p>
+
+<aside class="notice">
+Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <a href='#generar-token'>Como generar token</a>
+</aside>
+<h3 id='parametros-url'>Parámetros URL</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Identificador o número de pedido.</td>
+</tr>
+<tr>
+<td>invoiced</td>
+<td>Boolean</td>
+<td>Solo aceptará el valor de <strong>true</strong> para confirmar si un pedido fue facturado.</td>
+</tr>
+</tbody></table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>message</strong></td>
+<td>En caso de éxito retornará el detalle resumido del pedido, caso contrario, retornará un <em>String</em> con un mensaje acerca del motivo de la falla.</td>
+</tr>
+<tr>
+<td>message.id</td>
+<td>Identificador o número de pedido.</td>
+</tr>
+<tr>
+<td>message.order_amount</td>
+<td>Monto del pedido.</td>
+</tr>
+<tr>
+<td>message.coupon_discount_amount</td>
+<td>Monto de descuento por cupón.</td>
+</tr>
+<tr>
+<td>message.coupon_discount_title</td>
+<td>Título de cupón de descuento.</td>
+</tr>
+<tr>
+<td>message.payment_status</td>
+<td>Estado de pago del pedido <em>paid</em> o <em>unpaid</em></td>
+</tr>
+<tr>
+<td>message.order_status</td>
+<td>Estado del pedido</td>
+</tr>
+<tr>
+<td>message.total_tax_amount</td>
+<td>Monto de impuesto aplicado</td>
+</tr>
+<tr>
+<td>message.payment_method</td>
+<td>Método de pago</td>
+</tr>
+<tr>
+<td>message.checked</td>
+<td>Marca <em>1</em> si fué verificado por operador o <em>0</em> en caso contrario.</td>
+</tr>
+<tr>
+<td>message.order_type</td>
+<td>Tipo de canal recibido para el pedido.</td>
+</tr>
+<tr>
+<td>message.branch_id</td>
+<td>Identificado de la sucursal en la que se recibió el pedido.</td>
+</tr>
+<tr>
+<td>message.extra_discount</td>
+<td>Descuento extra, si aplicara.</td>
+</tr>
+<tr>
+<td>message.invoiced</td>
+<td>Marcará <strong>true</strong> si se marcó como facturado o <strong>false</strong> en el caso contrario.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Contentrá el valor de <strong>success</strong> si se realizó la marca como facturado, o <strong>failed</strong> en caso de alguna falla.</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>

@@ -337,6 +337,20 @@
               </ul>
           </li>
           <li>
+            <a href="#pedidos-externos" class="toc-h1 toc-link" data-title="Pedidos Externos">Pedidos Externos</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#listar-pedidos-externos" class="toc-h2 toc-link" data-title="Listar pedidos externos">Listar pedidos externos</a>
+                  </li>
+                  <li>
+                    <a href="#ingresar-pedido-externo" class="toc-h2 toc-link" data-title="Ingresar Pedido Externo">Ingresar Pedido Externo</a>
+                  </li>
+                  <li>
+                    <a href="#marcar-pedido-ext-como-facturado" class="toc-h2 toc-link" data-title="Marcar pedido ext como Facturado">Marcar pedido ext como Facturado</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errores" class="toc-h1 toc-link" data-title="Errores">Errores</a>
           </li>
       </ul>
@@ -1088,6 +1102,241 @@ Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <
 <tr>
 <td>status</td>
 <td>Contentrá el valor de <strong>success</strong> si se realizó la marca como facturado, o <strong>failed</strong> en caso de alguna falla.</td>
+</tr>
+</tbody></table>
+<h1 id='pedidos-externos'>Pedidos Externos</h1><h2 id='listar-pedidos-externos'>Listar pedidos externos</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Se asume que abcdedghi... es el token</span>
+curl <span class="s2">"https://app.chicochino.com.ec/api/v1/invoice/external-orders"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer abcdedghi..."</span>
+</code></pre></div>
+<blockquote>
+<p>Para el request previo, la respuesta es un JSON estructurado como sigue:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3023</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"449.85"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="err">...</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3023"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"billing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="err">...</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="err">...</span><span class="w">
+            </span><span class="err">//Resto</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">JSON</span><span class="w"> </span><span class="err">obtenido</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-22T16:03:53.000000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-22T17:57:24.000000Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="err">...</span><span class="w">
+          </span><span class="err">//JSON</span><span class="w"> </span><span class="err">Obtenido</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-22T16:03:55.000000Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-22T17:57:25.000000Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>Este endpoint recupera todos los pedidos externos que fueron recibidos por Webhook del sistema externo.</p>
+
+<aside class="notice">
+Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <a href='#generar-token'>Como generar token</a>
+</aside>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://app.chicochino.com.ec/api/v1/invoice/external-orders</code></p>
+<h3 id='respuesta'>Respuesta</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador interno.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>JSON que fue recibido del sistema externo.</td>
+</tr>
+<tr>
+<td>invoiced</td>
+<td>Booleano e indica si el registro ha sido o no procesado por el sistema facturador.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Fecha y hora de creación del registro.</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>Fecha y hora de actualización del registro.</td>
+</tr>
+</tbody></table>
+<h2 id='ingresar-pedido-externo'>Ingresar Pedido Externo</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Se asume que abcdedghi... es el token</span>
+curl <span class="nt">-k</span>  <span class="nt">-L</span> <span class="nt">-X</span> POST  <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span><span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer abcdedghi..."</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+      "id": 3023,
+      "parent_id": 0,
+      "status": "pending",
+      "currency": "USD",
+      "version": "8.0.1",
+      "prices_include_tax": false,
+      ...
+  }'</span> <span class="s1">'https://app.chicochino.com.ec/api/v1/invoice/external-orders'</span>
+</code></pre></div>
+<blockquote>
+<p>Para el request previo, la respuesta es un JSON estructurado como sigue:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3023</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"449.85"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="err">...</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3023"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"billing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="err">...</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="err">//Resto</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">JSON</span><span class="w"> </span><span class="err">enviado</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-22T16:03:53.000000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-22T17:57:24.000000Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Este endpoint se usa para recibir el pedido externo enviado por el Webhook.</p>
+
+<aside class="notice">
+Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <a href='#generar-token'>Como generar token</a>
+</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://app.chicochino.com.ec/api/v1/invoice/external-orders</code></p>
+<h3 id='parametros-url'>Parámetros URL</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*</td>
+<td>Json</td>
+<td>Recibe el JSON tal cual es enviado por el Webhook externo.</td>
+</tr>
+</tbody></table>
+<h3 id='respuesta-2'>Respuesta</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador interno.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>JSON que fue recibido del sistema externo.</td>
+</tr>
+<tr>
+<td>invoiced</td>
+<td>Booleano e indica si el registro ha sido o no procesado por el sistema facturador.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Fecha y hora de creación del registro.</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>Fecha y hora de actualización del registro.</td>
+</tr>
+</tbody></table>
+<h2 id='marcar-pedido-ext-como-facturado'>Marcar pedido ext como Facturado</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Se asume que abcdedghi... es el token</span>
+curl <span class="nt">-k</span>  <span class="nt">-L</span> <span class="nt">-X</span> PUT <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span><span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer abcdedghi..."</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+      "invoiced":true
+  }'</span> <span class="s1">'https://app.chicochino.com.ec/api/v1/invoice/external-orders/2'</span>
+</code></pre></div>
+<blockquote>
+<p>Para el request previo, la respuesta es un JSON estructurado como sigue:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="err">//JSON</span><span class="w"> </span><span class="err">Obtenido</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"invoiced"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-22T16:03:55.000000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-09-22T17:57:25.000000Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Este Endpoint marca a un pedido específico como facturado.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT https://app.chicochino.com.ec/api/v1/invoice/external-orders/{id}</code></p>
+
+<aside class="notice">
+Debe reemplazar <code>abcdedghi...</code> con su token generado anteriormente. <a href='#generar-token'>Como generar token</a>
+</aside>
+
+<aside class="warning">
+Debe reemplazar <code>{id}</code> con la Id del registro interno (No del JSON recibido).
+</aside>
+<h3 id='parametros-url-2'>Parámetros URL</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>invoiced</td>
+<td>Boolean</td>
+<td>Solo aceptará el valor de <strong>true</strong> para confirmar si un pedido fue facturado.</td>
+</tr>
+</tbody></table>
+<h3 id='respuesta-3'>Respuesta</h3>
+<table><thead>
+<tr>
+<th>Parámetro</th>
+<th>Descripción</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador interno.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>JSON que fue recibido del sistema externo.</td>
+</tr>
+<tr>
+<td>invoiced</td>
+<td>Booleano e indica si el registro ha sido o no procesado por el sistema facturador.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Fecha y hora de creación del registro.</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>Fecha y hora de actualización del registro.</td>
 </tr>
 </tbody></table>
 <h1 id='errores'>Errores</h1>
